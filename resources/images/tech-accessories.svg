@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#f7f5f5"/>
+  <rect x="1" y="1" width="398" height="238" fill="none" stroke="#a6192e" stroke-width="2"/>
+  <g transform="translate(140,60)" fill="none" stroke="#a6192e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="0" width="120" height="80" rx="8"/>
+    <line x1="30" y1="95" x2="90" y2="95"/>
+    <circle cx="60" cy="40" r="18"/>
+  </g>
+  <text x="200" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#a6192e" text-anchor="middle">Tech Accessories</text>
+</svg>
