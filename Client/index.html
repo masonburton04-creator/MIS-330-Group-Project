@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crimson Supply</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Our custom styles (loaded after Bootstrap so they can override it) -->
+  <link rel="stylesheet" href="Resources/Styles/index.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light site-header sticky-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="#" data-section="home">Crimson<span>Supply</span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto main-nav">
+          <li class="nav-item"><a class="nav-link" href="#" data-section="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="cart">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="admin">Admin</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a class="btn btn-crimson-outline" href="#" data-section="login">Log In</a>
+          <a class="btn btn-crimson" href="#" data-section="register">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+
+    <!-- ===== Home ===== -->
+    <section id="home" class="page-section">
+      <div class="hero">
+        <div class="container">
+          <h1>School &amp; Office Supplies, Delivered.</h1>
+          <p>Everything your classroom or workspace needs — notebooks, pens, tech accessories, and more — all in one place.</p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+            <a href="#" class="btn btn-crimson btn-lg" data-section="products">Shop Now</a>
+            <a href="#about" class="btn btn-hero-outline btn-lg">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-block">
+        <div class="container">
+          <h2 class="section-title">Featured Categories</h2>
+          <div class="row g-4">
+            <div class="col-sm-6 col-lg-3">
+              <div class="card h-100 category-card">
+                <img class="card-image" src="Resources/Images/writing-supplies.svg" alt="Writing supplies">
+                <h3>Writing Supplies</h3>
+                <p>Pens, pencils, markers, and highlighters.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="card h-100 category-card">
+                <img class="card-image" src="Resources/Images/notebooks.svg" alt="Paper and notebooks">
+                <h3>Paper &amp; Notebooks</h3>
+                <p>Notebooks, binders, and printer paper.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="card h-100 category-card">
+                <img class="card-image" src="Resources/Images/tech-accessories.svg" alt="Tech accessories">
+                <h3>Tech Accessories</h3>
+                <p>Chargers, cables, and desk gadgets.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="card h-100 category-card">
+                <img class="card-image" src="Resources/Images/organization.svg" alt="Organization supplies">
+                <h3>Organization</h3>
+                <p>Folders, storage bins, and desk organizers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="about" class="home-block home-block-alt">
+        <div class="container about-inner">
+          <h2 class="section-title">About Crimson Supply</h2>
+          <p>Crimson Supply is your one-stop shop for school and office essentials. We're committed to fast shipping, reliable stock, and prices that make sense for students, teachers, and offices alike.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Products ===== -->
+    <section id="products" class="page-section d-none">
+      <div class="container py-5">
+        <h2 class="mb-4">Products</h2>
+
+        <!-- Search and filter controls (not wired up yet) -->
+        <div class="row g-2 mb-4">
+          <div class="col-md-8">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
+          </div>
+          <div class="col-md-4">
+            <select id="categoryFilter" class="form-select">
+              <option value="">All Categories</option>
+              <option>Writing Supplies</option>
+              <option>Paper &amp; Notebooks</option>
+              <option>Tech Accessories</option>
+              <option>Organization</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- MOCKUP: these cards are hard-coded placeholders.
+             Later, JavaScript will build them from the API (products stored in MySQL). -->
+        <p class="mockup-note">Sample items shown for the mockup.</p>
+        <div id="productList" class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="card h-100 product-card">
+              <img class="product-image" src="Resources/Images/writing-supplies.svg" alt="Ballpoint pens">
+              <div class="card-body d-flex flex-column">
+                <span class="product-category">Writing Supplies</span>
+                <h3 class="product-name">Blue Ballpoint Pens (12-pack)</h3>
+                <p class="product-price">$4.99</p>
+                <p class="small text-success mb-3">In stock</p>
+                <a href="#" class="btn btn-crimson mt-auto" data-section="cart">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card h-100 product-card">
+              <img class="product-image" src="Resources/Images/notebooks.svg" alt="Spiral notebook">
+              <div class="card-body d-flex flex-column">
+                <span class="product-category">Paper &amp; Notebooks</span>
+                <h3 class="product-name">College-Ruled Spiral Notebook</h3>
+                <p class="product-price">$3.49</p>
+                <p class="small text-success mb-3">In stock</p>
+                <a href="#" class="btn btn-crimson mt-auto" data-section="cart">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card h-100 product-card">
+              <img class="product-image" src="Resources/Images/tech-accessories.svg" alt="USB-C cable">
+              <div class="card-body d-flex flex-column">
+                <span class="product-category">Tech Accessories</span>
+                <h3 class="product-name">USB-C Charging Cable (6 ft)</h3>
+                <p class="product-price">$9.99</p>
+                <p class="small text-warning mb-3">Only 3 left</p>
+                <a href="#" class="btn btn-crimson mt-auto" data-section="cart">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card h-100 product-card">
+              <img class="product-image" src="Resources/Images/organization.svg" alt="Desk organizer">
+              <div class="card-body d-flex flex-column">
+                <span class="product-category">Organization</span>
+                <h3 class="product-name">Mesh Desk Organizer</h3>
+                <p class="product-price">$14.99</p>
+                <p class="small text-danger mb-3">Out of stock</p>
+                <button class="btn btn-secondary mt-auto" disabled>Out of Stock</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Cart ===== -->
+    <section id="cart" class="page-section d-none">
+      <div class="container py-5">
+        <h2 class="mb-4">Your Cart</h2>
+        <p class="mockup-note">Sample cart shown for the mockup.</p>
+
+        <div class="row g-4">
+          <!-- Cart items -->
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Item</th>
+                      <th>Price</th>
+                      <th style="width: 110px;">Quantity</th>
+                      <th>Subtotal</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Blue Ballpoint Pens (12-pack)</td>
+                      <td>$4.99</td>
+                      <td><input type="number" class="form-control form-control-sm" value="2" min="1"></td>
+                      <td>$9.98</td>
+                      <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
+                    </tr>
+                    <tr>
+                      <td>College-Ruled Spiral Notebook</td>
+                      <td>$3.49</td>
+                      <td><input type="number" class="form-control form-control-sm" value="3" min="1"></td>
+                      <td>$10.47</td>
+                      <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <a href="#" class="btn btn-crimson-outline mt-3" data-section="products">Continue Shopping</a>
+          </div>
+
+          <!-- Order summary -->
+          <div class="col-lg-4">
+            <div class="card summary-card">
+              <div class="card-body">
+                <h3 class="h5 mb-3">Order Summary</h3>
+                <div class="d-flex justify-content-between"><span>Subtotal</span><span>$20.45</span></div>
+                <div class="d-flex justify-content-between"><span>Tax (8%)</span><span>$1.64</span></div>
+                <div class="d-flex justify-content-between"><span>Shipping</span><span>Free</span></div>
+                <hr>
+                <div class="d-flex justify-content-between fw-bold"><span>Total</span><span>$22.09</span></div>
+                <a href="#" class="btn btn-crimson w-100 mt-3" data-section="checkout">Proceed to Checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Checkout ===== -->
+    <section id="checkout" class="page-section d-none">
+      <div class="container py-5">
+        <h2 class="mb-4">Checkout</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-body p-4">
+                <form id="checkoutForm">
+                  <h3 class="h5 mb-3">Shipping Information</h3>
+                  <div class="row g-3 mb-3">
+                    <div class="col-sm-6">
+                      <label for="shipFirstName" class="form-label">First Name</label>
+                      <input type="text" id="shipFirstName" class="form-control" required>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="shipLastName" class="form-label">Last Name</label>
+                      <input type="text" id="shipLastName" class="form-control" required>
+                    </div>
+                    <div class="col-12">
+                      <label for="shipAddress" class="form-label">Street Address</label>
+                      <input type="text" id="shipAddress" class="form-control" required>
+                    </div>
+                    <div class="col-sm-5">
+                      <label for="shipCity" class="form-label">City</label>
+                      <input type="text" id="shipCity" class="form-control" required>
+                    </div>
+                    <div class="col-sm-3">
+                      <label for="shipState" class="form-label">State</label>
+                      <input type="text" id="shipState" class="form-control" maxlength="2" required>
+                    </div>
+                    <div class="col-sm-4">
+                      <label for="shipZip" class="form-label">ZIP Code</label>
+                      <input type="text" id="shipZip" class="form-control" pattern="[0-9]{5}" title="5-digit ZIP code" required>
+                    </div>
+                  </div>
+
+                  <h3 class="h5 mb-3">Payment</h3>
+                  <div class="alert alert-info">
+                    Checkout is simulated for this project. No real payment information is collected.
+                  </div>
+
+                  <button type="submit" class="btn btn-crimson btn-lg w-100">Place Order</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card summary-card">
+              <div class="card-body">
+                <h3 class="h5 mb-3">Your Order</h3>
+                <div class="d-flex justify-content-between small"><span>Ballpoint Pens × 2</span><span>$9.98</span></div>
+                <div class="d-flex justify-content-between small"><span>Spiral Notebook × 3</span><span>$10.47</span></div>
+                <hr>
+                <div class="d-flex justify-content-between"><span>Tax</span><span>$1.64</span></div>
+                <div class="d-flex justify-content-between fw-bold"><span>Total</span><span>$22.09</span></div>
+                <a href="#" class="btn btn-link px-0 mt-2" data-section="cart">&larr; Back to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Order Confirmation ===== -->
+    <section id="confirmation" class="page-section d-none">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <div class="card text-center confirmation-card">
+              <div class="card-body p-5">
+                <div class="confirmation-check">&#10003;</div>
+                <h2 class="mb-2">Thank You for Your Order!</h2>
+                <p class="text-muted">Your order has been placed successfully.</p>
+                <p class="fs-5 mb-1">Order Number: <strong>#1001</strong></p>
+                <p class="mb-4">Order Total: <strong>$22.09</strong></p>
+                <a href="#" class="btn btn-crimson" data-section="products">Continue Shopping</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Admin Dashboard ===== -->
+    <section id="admin" class="page-section d-none">
+      <div class="container py-5">
+        <h2 class="mb-1">Admin Dashboard</h2>
+        <p class="mockup-note">Sample data shown for the mockup. Admin access will require an Admin login later.</p>
+
+        <!-- Quick stats -->
+        <div class="row g-3 mb-4">
+          <div class="col-sm-4">
+            <div class="card stat-card"><div class="card-body">
+              <div class="stat-label">Total Products</div>
+              <div class="stat-value">4</div>
+            </div></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card stat-card"><div class="card-body">
+              <div class="stat-label">Low / Out of Stock</div>
+              <div class="stat-value">2</div>
+            </div></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card stat-card"><div class="card-body">
+              <div class="stat-label">Orders Placed</div>
+              <div class="stat-value">1</div>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Product and inventory table -->
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="h5 mb-3">Products &amp; Inventory</h3>
+                <div class="table-responsive">
+                  <table class="table align-middle mb-0">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Blue Ballpoint Pens (12-pack)</td>
+                        <td>Writing Supplies</td>
+                        <td>$4.99</td>
+                        <td><span class="badge bg-success">48</span></td>
+                        <td class="text-nowrap">
+                          <button class="btn btn-sm btn-crimson-outline">Edit</button>
+                          <button class="btn btn-sm btn-outline-danger">Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>College-Ruled Spiral Notebook</td>
+                        <td>Paper &amp; Notebooks</td>
+                        <td>$3.49</td>
+                        <td><span class="badge bg-success">120</span></td>
+                        <td class="text-nowrap">
+                          <button class="btn btn-sm btn-crimson-outline">Edit</button>
+                          <button class="btn btn-sm btn-outline-danger">Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>USB-C Charging Cable (6 ft)</td>
+                        <td>Tech Accessories</td>
+                        <td>$9.99</td>
+                        <td><span class="badge bg-warning text-dark">3 (Low)</span></td>
+                        <td class="text-nowrap">
+                          <button class="btn btn-sm btn-crimson-outline">Edit</button>
+                          <button class="btn btn-sm btn-outline-danger">Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Mesh Desk Organizer</td>
+                        <td>Organization</td>
+                        <td>$14.99</td>
+                        <td><span class="badge bg-danger">0 (Out)</span></td>
+                        <td class="text-nowrap">
+                          <button class="btn btn-sm btn-crimson-outline">Edit</button>
+                          <button class="btn btn-sm btn-outline-danger">Delete</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add product form -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="h5 mb-3">Add Product</h3>
+                <form id="addProductForm">
+                  <div class="mb-3">
+                    <label for="newProductName" class="form-label">Product Name</label>
+                    <input type="text" id="newProductName" class="form-control" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="newProductCategory" class="form-label">Category</label>
+                    <select id="newProductCategory" class="form-select" required>
+                      <option value="">Choose...</option>
+                      <option>Writing Supplies</option>
+                      <option>Paper &amp; Notebooks</option>
+                      <option>Tech Accessories</option>
+                      <option>Organization</option>
+                    </select>
+                  </div>
+                  <div class="row g-2 mb-3">
+                    <div class="col-6">
+                      <label for="newProductPrice" class="form-label">Price ($)</label>
+                      <input type="number" id="newProductPrice" class="form-control" min="0" step="0.01" required>
+                    </div>
+                    <div class="col-6">
+                      <label for="newProductStock" class="form-label">Stock</label>
+                      <input type="number" id="newProductStock" class="form-control" min="0" step="1" required>
+                    </div>
+                  </div>
+                  <div id="addProductMessage" class="alert d-none"></div>
+                  <button type="submit" class="btn btn-crimson w-100">Add Product</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Login ===== -->
+    <section id="login" class="page-section d-none">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+              <div class="card-body p-4">
+                <h2 class="h4 mb-4 text-center">Log In</h2>
+                <form id="loginForm">
+                  <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Email</label>
+                    <input type="email" id="loginEmail" class="form-control" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-control" required>
+                  </div>
+                  <div id="loginMessage" class="alert d-none"></div>
+                  <button type="submit" class="btn btn-crimson w-100">Log In</button>
+                </form>
+                <p class="text-center small mt-3 mb-0">
+                  Don't have an account? <a href="#" data-section="register">Sign up</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Register ===== -->
+    <section id="register" class="page-section d-none">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-5">
+            <div class="card shadow-sm">
+              <div class="card-body p-4">
+                <h2 class="h4 mb-4 text-center">Create an Account</h2>
+                <form id="registerForm">
+                  <div class="row g-3 mb-3">
+                    <div class="col-sm-6">
+                      <label for="registerFirstName" class="form-label">First Name</label>
+                      <input type="text" id="registerFirstName" class="form-control" required>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="registerLastName" class="form-label">Last Name</label>
+                      <input type="text" id="registerLastName" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="registerEmail" class="form-label">Email</label>
+                    <input type="email" id="registerEmail" class="form-control" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="registerPassword" class="form-label">Password</label>
+                    <input type="password" id="registerPassword" class="form-control" required>
+                  </div>
+                  <div id="registerMessage" class="alert d-none"></div>
+                  <button type="submit" class="btn btn-crimson w-100">Sign Up</button>
+                </form>
+                <p class="text-center small mt-3 mb-0">
+                  Already have an account? <a href="#" data-section="login">Log in</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer mt-auto">
+    <div class="container">
+      &copy; 2026 Crimson Supply. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (needed for the mobile navbar toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Resources/Scripts/index.js"></script>
+</body>
+</html>

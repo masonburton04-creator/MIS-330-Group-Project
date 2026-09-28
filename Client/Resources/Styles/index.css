@@ -1,0 +1,302 @@
+/* Crimson Supply brand colors (from the original mockup) */
+:root {
+  --crimson: #a6192e;
+  --crimson-dark: #7d1322;
+  --white: #ffffff;
+  --off-white: #f7f5f5;
+  --text: #2b2b2b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+/* ===== Header / Navbar ===== */
+.site-header {
+  background: var(--white);
+  border-bottom: 2px solid var(--crimson);
+  padding: 12px 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--crimson) !important;
+}
+
+.logo span {
+  color: var(--text);
+}
+
+.main-nav .nav-link {
+  color: var(--text);
+  font-weight: 500;
+  padding: 0 14px !important;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+  color: var(--crimson);
+}
+
+/* ===== Buttons ===== */
+.btn-crimson,
+.btn-crimson-outline,
+.btn-hero-outline {
+  font-weight: 600;
+  border: 2px solid var(--crimson);
+  border-radius: 4px;
+}
+
+.btn-crimson {
+  background: var(--crimson);
+  color: var(--white);
+}
+
+.btn-crimson:hover,
+.btn-crimson:focus {
+  background: var(--crimson-dark);
+  border-color: var(--crimson-dark);
+  color: var(--white);
+}
+
+.btn-crimson-outline {
+  background: transparent;
+  color: var(--crimson);
+}
+
+.btn-crimson-outline:hover,
+.btn-crimson-outline:focus {
+  background: var(--crimson);
+  color: var(--white);
+}
+
+/* White outline button used on the crimson hero */
+.btn-hero-outline {
+  background: transparent;
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.btn-hero-outline:hover,
+.btn-hero-outline:focus {
+  background: var(--white);
+  color: var(--crimson);
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: url('../Images/hero-pattern.svg') repeat;
+  color: var(--white);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  opacity: 0.95;
+}
+
+/* The crimson Shop Now button needs a white border to stand out on the hero */
+.hero .btn-crimson {
+  border-color: var(--white);
+}
+
+/* ===== Home page blocks ===== */
+.home-block {
+  padding: 72px 0;
+}
+
+.home-block-alt {
+  background: var(--off-white);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--crimson);
+  margin-bottom: 40px;
+}
+
+/* Keep the sticky navbar from covering the About heading when jumping to it */
+#about {
+  scroll-margin-top: 70px;
+}
+
+.about-inner {
+  text-align: center;
+  max-width: 700px;
+}
+
+/* Headings on the other sections use the brand color too */
+.page-section h2 {
+  color: var(--crimson);
+}
+
+/* ===== Category cards ===== */
+.category-card {
+  background: var(--white);
+  border: 1px solid #e5dede;
+  border-radius: 8px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.category-card:hover {
+  box-shadow: 0 6px 18px rgba(166, 25, 46, 0.15);
+  transform: translateY(-3px);
+}
+
+.card-image {
+  width: 100%;
+  height: 140px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+.category-card h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--crimson);
+  margin-bottom: 8px;
+}
+
+.category-card p {
+  margin-bottom: 0;
+}
+
+/* Small gray label marking placeholder data in the mockup */
+.mockup-note {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* ===== Product cards ===== */
+.product-card {
+  border: 1px solid #e5dede;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 18px rgba(166, 25, 46, 0.15);
+  transform: translateY(-3px);
+}
+
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.product-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.product-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 4px 0 8px;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--crimson);
+  margin-bottom: 4px;
+}
+
+/* ===== Cart / Checkout ===== */
+.summary-card {
+  border-top: 4px solid var(--crimson);
+}
+
+.summary-card .d-flex {
+  margin-bottom: 6px;
+}
+
+/* ===== Order Confirmation ===== */
+.confirmation-card {
+  border-top: 4px solid var(--crimson);
+}
+
+.confirmation-check {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--crimson);
+  color: var(--white);
+  font-size: 2rem;
+}
+
+/* ===== Admin ===== */
+.stat-card {
+  border-left: 4px solid var(--crimson);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--crimson);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--crimson-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 24px 0;
+}
+
+/* ===== Small screens ===== */
+@media (max-width: 991px) {
+  .main-nav .nav-link {
+    padding: 8px 0 !important;
+  }
+
+  .site-header .d-flex {
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
