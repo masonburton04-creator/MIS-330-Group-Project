@@ -1,6 +1,11 @@
 @API_HostAddress = http://localhost:5095
 
-GET {{API_HostAddress}}/weatherforecast/
+# Add test requests for the Crimson Supply endpoints here as they are built.
+
+### Get all active products
+GET {{API_HostAddress}}/api/products
 Accept: application/json
 
-###
+### Get all categories
+GET {{API_HostAddress}}/api/categories
+Accept: application/json
