@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Watercolor travel set"><rect width="400" height="400" fill="#DDEAF0"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="70" y="110" width="260" height="180" rx="14" fill="#2A2420"/>
+<rect x="84" y="124" width="232" height="152" rx="8" fill="#FFFDF9"/>
+<g stroke-width="3"><rect x="98" y="140" width="30" height="40" rx="4" fill="#A3132E"/><rect x="134" y="140" width="30" height="40" rx="4" fill="#D97A5B"/><rect x="170" y="140" width="30" height="40" rx="4" fill="#F2B134"/><rect x="206" y="140" width="30" height="40" rx="4" fill="#F7D774"/><rect x="242" y="140" width="30" height="40" rx="4" fill="#7F9C83"/><rect x="278" y="140" width="24" height="40" rx="4" fill="#3E7C6B"/>
+<rect x="98" y="196" width="30" height="40" rx="4" fill="#A8C8E8"/><rect x="134" y="196" width="30" height="40" rx="4" fill="#2C4A6B"/><rect x="170" y="196" width="30" height="40" rx="4" fill="#8A6FB0"/><rect x="206" y="196" width="30" height="40" rx="4" fill="#F4B6C2"/><rect x="242" y="196" width="30" height="40" rx="4" fill="#9C6B43"/><rect x="278" y="196" width="24" height="40" rx="4" fill="#2A2420"/></g>
+<g transform="rotate(-24 220 300)"><rect x="110" y="292" width="180" height="14" rx="6" fill="#9C6B43"/><path d="M290 292 L330 299 L290 306Z" fill="#2A2420"/></g>
+</g></svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Everyday fountain pen"><rect width="400" height="400" fill="#DDE5EE"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M70 300 C 130 250, 170 330, 230 280 S 320 250, 340 270" fill="none" stroke="#2C4A6B" stroke-width="9"/>
+<g transform="rotate(-38 200 200)">
+<rect x="60" y="180" width="170" height="40" rx="18" fill="#1F3550"/>
+<rect x="196" y="178" width="14" height="44" fill="#D9A93A"/>
+<path d="M230 184 L290 192 Q 330 200 290 208 L230 216Z" fill="#E7C368"/>
+<path d="M262 200 H318" stroke-width="3"/><circle cx="262" cy="200" r="4" fill="#2A2420" stroke="none"/>
+<path d="M80 172 h90" stroke="#D9A93A" stroke-width="7"/>
+</g>
+</g></svg>

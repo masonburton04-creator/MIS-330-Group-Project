@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Sticky notes variety pack"><rect width="400" height="400" fill="#F3E9F1"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="96" y="96" width="140" height="140" rx="4" fill="#A8C8E8" transform="rotate(-12 166 166)"/>
+<rect x="180" y="110" width="140" height="140" rx="4" fill="#A8D8C8" transform="rotate(9 250 180)"/>
+<rect x="88" y="170" width="140" height="140" rx="4" fill="#F4B6C2" transform="rotate(6 158 240)"/>
+<g transform="rotate(-5 242 246)"><rect x="172" y="176" width="140" height="140" rx="4" fill="#F7D774"/><path d="M196 216 H284 M196 240 H268" stroke-width="4"/><path d="M290 316 q 18 -4 22 -22 l-22 4z" fill="#E8C14E"/></g>
+</g></svg>

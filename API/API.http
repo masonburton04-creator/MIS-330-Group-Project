@@ -1,11 +1,139 @@
 @API_HostAddress = http://localhost:5095
 
-# Add test requests for the Crimson Supply endpoints here as they are built.
+# Test requests for the Crimson Supply API.
+# Sign-in uses a cookie. In VS Code's REST Client the cookie from "Log in"
+# is reused automatically for the requests after it.
 
-### Get all active products
-GET {{API_HostAddress}}/api/products
-Accept: application/json
+### ===== Public (no sign-in) =====
 
-### Get all categories
+### Categories with product counts
 GET {{API_HostAddress}}/api/categories
-Accept: application/json
+
+### Catalog: search, filter and sort (every query parameter is optional)
+GET {{API_HostAddress}}/api/products?search=pen&categoryId=1&minPrice=5&maxPrice=20&inStock=true&sort=price-asc
+
+### Best sellers (sort options: featured, popular, newest, price-asc, price-desc, name)
+GET {{API_HostAddress}}/api/products?sort=popular&limit=4
+
+### One product
+GET {{API_HostAddress}}/api/products/1
+
+### ===== Account =====
+
+### Create a customer account (also signs you in)
+POST {{API_HostAddress}}/api/account/register
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane@example.com",
+  "password": "Notebook2026"
+}
+
+### Log in
+POST {{API_HostAddress}}/api/account/login
+Content-Type: application/json
+
+{
+  "email": "jane@example.com",
+  "password": "Notebook2026"
+}
+
+### Who is signed in? (204 = nobody)
+GET {{API_HostAddress}}/api/account/me
+
+### Update my profile
+PUT {{API_HostAddress}}/api/account/me
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane@example.com",
+  "phone": "205-555-0101"
+}
+
+### Log out
+POST {{API_HostAddress}}/api/account/logout
+
+### ===== Orders (signed in) =====
+
+### Place an order (prices and totals are calculated by the server)
+POST {{API_HostAddress}}/api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    { "productId": 1, "quantity": 2 },
+    { "productId": 7, "quantity": 1 }
+  ]
+}
+
+### My order history
+GET {{API_HostAddress}}/api/orders/mine
+
+### One order (mine, or any order for an admin)
+GET {{API_HostAddress}}/api/orders/1
+
+### ===== Admin only (sign in as an admin first) =====
+
+### Every order
+GET {{API_HostAddress}}/api/orders
+
+### Change an order's status (Placed, Ready for Pickup, Completed, Cancelled)
+PUT {{API_HostAddress}}/api/orders/1/status
+Content-Type: application/json
+
+{ "status": "Ready for Pickup" }
+
+### Every product, including hidden ones
+GET {{API_HostAddress}}/api/products/manage
+
+### Add a product
+POST {{API_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "sku": "DSK-399",
+  "productName": "Kraft Envelope Pack",
+  "description": "Twenty-five 6 x 9 in kraft envelopes.",
+  "price": 4.50,
+  "stockQuantity": 12,
+  "imageUrl": "Resources/Images/products/folders.svg",
+  "categoryId": 3
+}
+
+### Restock (+) or write off (-) inventory
+PATCH {{API_HostAddress}}/api/products/1/stock
+Content-Type: application/json
+
+{ "change": 25 }
+
+### Hide a product from the store (true shows it again)
+PATCH {{API_HostAddress}}/api/products/1/active
+Content-Type: application/json
+
+{ "isActive": false }
+
+### Add a category
+POST {{API_HostAddress}}/api/categories
+Content-Type: application/json
+
+{ "categoryName": "Seasonal", "description": "Limited-time items." }
+
+### The five business reports
+GET {{API_HostAddress}}/api/reports/sales-by-product
+###
+GET {{API_HostAddress}}/api/reports/sales-by-category
+###
+GET {{API_HostAddress}}/api/reports/sales-by-month
+###
+GET {{API_HostAddress}}/api/reports/customers
+###
+GET {{API_HostAddress}}/api/reports/inventory
+
+### Dashboard numbers and the low-stock list
+GET {{API_HostAddress}}/api/reports/summary
+###
+GET {{API_HostAddress}}/api/reports/low-stock

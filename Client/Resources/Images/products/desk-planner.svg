@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Weekly desk planner pad"><rect width="400" height="400" fill="#EEF0E2"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="60" y="100" width="280" height="200" rx="8" fill="#FFFDF9"/>
+<rect x="60" y="100" width="280" height="36" rx="8" fill="#A3132E"/>
+<path d="M100 136 V300 M140 136 V300 M180 136 V300 M220 136 V300 M260 136 V300 M300 136 V300" stroke-width="2.5"/>
+<g stroke="none" fill="#F7F2EA"><circle cx="80" cy="118" r="4"/><circle cx="120" cy="118" r="4"/><circle cx="160" cy="118" r="4"/><circle cx="200" cy="118" r="4"/><circle cx="240" cy="118" r="4"/><circle cx="280" cy="118" r="4"/><circle cx="320" cy="118" r="4"/></g>
+<g stroke-width="2.5"><rect x="68" y="160" width="24" height="18" rx="3" fill="#F7D774"/><rect x="148" y="200" width="24" height="18" rx="3" fill="#A8D8C8"/><rect x="228" y="170" width="24" height="18" rx="3" fill="#F4B6C2"/><rect x="268" y="236" width="24" height="18" rx="3" fill="#A8C8E8"/></g>
+</g></svg>

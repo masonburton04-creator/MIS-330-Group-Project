@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Gel ink pens"><rect width="400" height="400" fill="#F6D9D3"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<defs><g id="p"><rect x="-15" y="-130" width="30" height="210" rx="10" fill="#FFFDF9"/><rect x="-15" y="-150" width="30" height="86" rx="10" fill="currentColor"/><rect x="11" y="-138" width="7" height="70" rx="3" fill="currentColor"/><rect x="-15" y="40" width="30" height="40" fill="#E9E1D6"/><path d="M-15 80 L0 112 L15 80Z" fill="#E9E1D6"/></g></defs>
+<use href="#p" transform="translate(140 214) rotate(-22)" color="#A3132E"/><use href="#p" transform="translate(180 204) rotate(-8)" color="#2C4A6B"/><use href="#p" transform="translate(222 204) rotate(7)" color="#F2B134"/><use href="#p" transform="translate(262 214) rotate(21)" color="#7F9C83"/>
+</g></svg>

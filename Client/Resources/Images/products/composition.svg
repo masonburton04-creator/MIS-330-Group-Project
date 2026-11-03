@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Composition notebook"><rect width="400" height="400" fill="#EDE6DD"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="110" y="70" width="190" height="250" rx="8" fill="#FFFDF9"/>
+<g stroke="none" fill="#2A2420"><path d="M130 90 q 30 20 10 50 q -20 25 15 40 q 30 15 5 50 q -15 30 25 60 h -55 z"/><path d="M190 75 q -10 30 25 35 q 40 5 30 40 q -10 30 30 30 v -105 z"/><path d="M200 200 q 30 -10 40 20 q 10 30 55 25 v 70 h -60 q 20 -40 -15 -55 q -30 -15 -20 -60z"/><circle cx="170" cy="140" r="9"/><circle cx="262" cy="110" r="7"/><circle cx="240" cy="290" r="8"/></g>
+<rect x="110" y="70" width="190" height="250" rx="8" fill="none"/>
+<rect x="104" y="70" width="26" height="250" rx="4" fill="#2A2420"/>
+<rect x="160" y="128" width="110" height="70" rx="6" fill="#FFFDF9"/><path d="M174 152 H256 M174 172 H240" stroke-width="3"/>
+</g></svg>

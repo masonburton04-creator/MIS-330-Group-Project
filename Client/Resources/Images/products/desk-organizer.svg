@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Mesh desk organizer"><rect width="400" height="400" fill="#DFE7DC"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<g transform="rotate(-8 150 150)"><rect x="140" y="60" width="16" height="160" rx="5" fill="#A3132E"/><path d="M140 60 l8 -16 l8 16" fill="#FFFDF9"/></g>
+<g transform="rotate(10 220 140)"><rect x="210" y="70" width="14" height="150" rx="4" fill="#F2B134"/><path d="M210 70 l7 -14 l7 14" fill="#EBC9A0"/></g>
+<g transform="rotate(6 259 155)"><rect x="244" y="80" width="30" height="150" fill="#FFFDF9"/><path d="M252 100 h10 M252 120 h14 M252 140 h10 M252 160 h14" stroke-width="3"/></g>
+<defs><pattern id="m" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M0 7 H14 M7 0 V14" stroke="#FFFDF9" stroke-width="1.6" opacity=".35"/></pattern></defs>
+<rect x="90" y="170" width="220" height="150" rx="10" fill="#4A4A4A"/><rect x="90" y="170" width="220" height="150" rx="10" fill="url(#m)"/>
+<rect x="110" y="270" width="180" height="40" rx="6" fill="#5C5C5C"/><path d="M180 290 H220" stroke="#FFFDF9" stroke-width="5"/>
+</g></svg>

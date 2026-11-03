@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Heavy-duty desk stapler"><rect width="400" height="400" fill="#F0DDD6"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="70" y="280" width="270" height="34" rx="12" fill="#3A3A3A"/>
+<path d="M90 280 L90 240 Q90 214 116 210 L320 196 Q342 196 340 220 L336 252 L110 262Z" fill="#A3132E"/>
+<path d="M120 232 L318 218" stroke="#FFFDF9" stroke-width="4" opacity=".5"/>
+<rect x="76" y="232" width="34" height="56" rx="8" fill="#B9B4AC"/><circle cx="93" cy="258" r="6" fill="#2A2420"/>
+<rect x="300" y="262" width="34" height="18" rx="4" fill="#B9B4AC"/>
+</g></svg>

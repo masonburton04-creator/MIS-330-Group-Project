@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Silent wireless mouse"><rect width="400" height="400" fill="#E8E3F0"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M200 60 C 120 60 112 140 112 210 C 112 290 150 330 200 330 C 250 330 288 290 288 210 C 288 140 280 60 200 60Z" fill="#FFFDF9"/>
+<path d="M200 60 V170 M114 170 H286" stroke-width="4"/>
+<rect x="190" y="96" width="20" height="42" rx="10" fill="#A3132E"/>
+<path d="M150 250 q 50 30 100 0" fill="none" stroke="#C9C3BA" stroke-width="4"/>
+<rect x="306" y="256" width="40" height="22" rx="5" fill="#2C4A6B"/>
+</g></svg>

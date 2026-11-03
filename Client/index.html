@@ -3,483 +3,517 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crimson Supply</title>
+  <title>Crimson Supply · Tools for the work you're proud of</title>
+  <meta name="description" content="Crimson Supply: school, office and studio supplies with real-time stock and free in-store pickup.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M6 3h21l9 9v25H6z' fill='%23A3132E'/%3E%3Cpath d='M27 3v9h9' fill='%236F0B1F'/%3E%3C/svg%3E">
 
-  <!-- Bootstrap CSS -->
+  <!-- Fonts: Fraunces (display), Instrument Sans (text), IBM Plex Mono (labels, SKUs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400..700&display=swap">
+
+  <!-- Bootstrap CSS, then our styles (loaded second so they can override Bootstrap) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <!-- Our custom styles (loaded after Bootstrap so they can override it) -->
   <link rel="stylesheet" href="Resources/Styles/index.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
 
-  <!-- ===== Navbar ===== -->
-  <nav class="navbar navbar-expand-lg navbar-light site-header sticky-top">
-    <div class="container">
-      <a class="navbar-brand logo" href="#" data-section="home">Crimson<span>Supply</span></a>
+  <!-- ===== Icon sprite: each <symbol> is drawn once and reused with <svg><use href="#i-name"></use></svg> ===== -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20c1.2-3.6 4-5.5 7.5-5.5s6.3 1.9 7.5 5.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m3.5 7.5 8.5-4 8.5 4v9l-8.5 4-8.5-4v-9Z"/><path d="m3.5 7.5 8.5 4 8.5-4M12 11.5v9"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 12.5V4.5h8l9 9-8 8-9-9Z"/><circle cx="8" cy="9" r="1.5"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16v-5M12 16V6M17 16v-8"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M10 7V4.5h4V7M6.5 7l1 13h9l1-13"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3L19.5 9"/><path d="M19.5 4v5h-5"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4.5H6.5v15H14"/><path d="M10.5 12h10M17 8.5l3.5 3.5-3.5 3.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4 2.5 20h19L12 4Z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9.5 5.5 4h13L20 9.5"/><path d="M4 9.5c0 1.7 1.3 2.5 2.7 2.5s2.6-.8 2.6-2.5c0 1.7 1.3 2.5 2.7 2.5s2.7-.8 2.7-2.5c0 1.7 1.2 2.5 2.6 2.5S20 11.2 20 9.5M5.5 12v8h13v-8"/><path d="M10 20v-4.5h4V20"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3.5 13.8 10l6.7 2-6.7 2L12 20.5 10.2 14l-6.7-2 6.7-2L12 3.5Z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3.5 9 4.5-9 4.5L3 8l9-4.5Z"/><path d="m3 12.5 9 4.5 9-4.5M3 16.5 12 21l9-4.5"/></symbol>
+  </svg>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav mx-auto main-nav">
-          <li class="nav-item"><a class="nav-link" href="#" data-section="home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-section="products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-section="cart">Cart</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-section="admin">Admin</a></li>
-        </ul>
-        <div class="d-flex gap-2">
-          <a class="btn btn-crimson-outline" href="#" data-section="login">Log In</a>
-          <a class="btn btn-crimson" href="#" data-section="register">Sign Up</a>
+  <!-- ===== Announcement ticker (the text is repeated so the scroll loops seamlessly) ===== -->
+  <div class="ticker" role="note" aria-label="Store announcements">
+    <div class="ticker-track" aria-hidden="true">
+      <span>Free in-store pickup, ready in 2 hours</span><span class="ticker-dot">✦</span>
+      <span>Live stock on every product</span><span class="ticker-dot">✦</span>
+      <span>Pay at pickup: no card needed online</span><span class="ticker-dot">✦</span>
+      <span>New: studio &amp; desk arrivals for fall term</span><span class="ticker-dot">✦</span>
+      <span>Free in-store pickup, ready in 2 hours</span><span class="ticker-dot">✦</span>
+      <span>Live stock on every product</span><span class="ticker-dot">✦</span>
+      <span>Pay at pickup: no card needed online</span><span class="ticker-dot">✦</span>
+      <span>New: studio &amp; desk arrivals for fall term</span><span class="ticker-dot">✦</span>
+    </div>
+    <span class="visually-hidden">Free in-store pickup ready in 2 hours. Live stock on every product. Pay at pickup, no card needed online.</span>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-xl header-inner">
+      <a class="brand" href="#/" aria-label="Crimson Supply home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M6 3h21l9 9v25H6z" fill="#A3132E"/>
+          <path d="M27 3v9h9" fill="#6F0B1F"/>
+          <path d="M23.5 17.2a6.6 6.6 0 1 0 0 9.6" fill="none" stroke="#F7F2EA" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">Crimson<em>Supply</em></span>
+      </a>
+
+      <nav class="main-nav d-none d-lg-flex" aria-label="Main">
+        <a href="#/shop" data-nav="shop">Shop all</a>
+        <div class="dropdown">
+          <button class="nav-drop" type="button" data-bs-toggle="dropdown" aria-expanded="false">Departments</button>
+          <ul class="dropdown-menu dept-menu" id="deptMenu"></ul>
         </div>
+        <a href="#/shop?sort=newest" data-nav="new">New arrivals</a>
+        <a href="#/kits" data-nav="kits">Kits</a>
+      </nav>
+
+      <form class="header-search" id="headerSearch" role="search">
+        <label for="headerSearchInput" class="visually-hidden">Search products</label>
+        <svg class="icon"><use href="#i-search"></use></svg>
+        <input id="headerSearchInput" type="search" placeholder="Search pens, notebooks, SKUs…" autocomplete="off">
+      </form>
+
+      <div class="header-actions">
+        <a class="admin-chip" id="adminLink" href="#/admin" hidden>
+          <svg class="icon"><use href="#i-grid"></use></svg><span>Admin</span>
+        </a>
+        <!-- Filled by account.js: a "Sign in" link, or the signed-in user's menu -->
+        <div id="accountArea" class="account-area"></div>
+        <button class="bag-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" aria-controls="cartDrawer">
+          <svg class="icon"><use href="#i-bag"></use></svg>
+          <span class="d-none d-sm-inline">Bag</span>
+          <span class="bag-count" id="cartCount" aria-live="polite">0</span>
+          <span class="visually-hidden">items in bag</span>
+        </button>
+        <button class="icon-button d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+          <svg class="icon"><use href="#i-menu"></use></svg>
+        </button>
       </div>
     </div>
-  </nav>
 
-  <main class="flex-grow-1">
+    <nav class="collapse mobile-nav d-lg-none" id="mobileNav" aria-label="Mobile">
+      <div class="container-xl">
+        <a href="#/shop">Shop all</a>
+        <a href="#/shop?sort=newest">New arrivals</a>
+        <a href="#/kits">Kits</a>
+        <div class="mobile-depts" id="mobileDepts"></div>
+      </div>
+    </nav>
+  </header>
 
-    <!-- ===== Home ===== -->
-    <section id="home" class="page-section">
+  <main id="main" tabindex="-1">
+
+    <!-- ================= HOME ================= -->
+    <section class="view" id="view-home" hidden>
       <div class="hero">
-        <div class="container">
-          <h1>School &amp; Office Supplies, Delivered.</h1>
-          <p>Everything your classroom or workspace needs — notebooks, pens, tech accessories, and more — all in one place.</p>
-          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-            <a href="#" class="btn btn-crimson btn-lg" data-section="products">Shop Now</a>
-            <a href="#about" class="btn btn-hero-outline btn-lg">Learn More</a>
+        <div class="container-xl hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span>Fall term 2026 · New studio &amp; desk arrivals</p>
+            <h1 class="hero-title">Supplies for the work you're <span class="swipe">proud&nbsp;of.</span></h1>
+            <p class="hero-lede">Pens that glide, paper that takes ink, and tech that just works. Order online, then pick it up at the counter in two hours.</p>
+            <div class="hero-ctas">
+              <a href="#/shop" class="btn-cs btn-cs-primary btn-cs-lg">Shop the collection <svg class="icon"><use href="#i-arrow"></use></svg></a>
+              <a href="#/kits" class="btn-cs btn-cs-ghost btn-cs-lg">Grab a ready-made kit</a>
+            </div>
+            <dl class="hero-stats" id="heroStats" aria-live="polite">
+              <div><dt>Products</dt><dd>—</dd></div>
+              <div><dt>Departments</dt><dd>—</dd></div>
+              <div><dt>Pickup</dt><dd>2 hrs</dd></div>
+            </dl>
+          </div>
+
+          <div class="hero-art" id="heroArt" aria-hidden="true">
+            <!-- Three best-selling products are placed here as a "desk flat-lay" by index.js -->
+            <div class="hero-board"></div>
+            <svg class="stamp" viewBox="0 0 120 120">
+              <defs><path id="stampCircle" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+              <circle cx="60" cy="60" r="58" fill="#A3132E"/>
+              <text><textPath href="#stampCircle">CRIMSON SUPPLY ✦ CAMPUS &amp; STUDIO ✦ EST. 2026 ✦</textPath></text>
+              <path d="M48 62l8 8 17-18" fill="none" stroke="#F7F2EA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
         </div>
       </div>
 
-      <!-- Category and product photos are free stock photos from Unsplash (unsplash.com/license) -->
-      <div class="home-block">
-        <div class="container">
-          <h2 class="section-title">Featured Categories</h2>
-          <div class="row g-4">
-            <div class="col-sm-6 col-lg-3">
-              <div class="card h-100 category-card">
-                <img class="card-image" src="Resources/Images/category-writing.jpg" alt="Writing supplies">
-                <h3>Writing Supplies</h3>
-                <p>Pens, pencils, markers, and highlighters.</p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card h-100 category-card">
-                <img class="card-image" src="Resources/Images/category-notebooks.jpg" alt="Paper and notebooks">
-                <h3>Paper &amp; Notebooks</h3>
-                <p>Notebooks, binders, and printer paper.</p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card h-100 category-card">
-                <img class="card-image" src="Resources/Images/category-tech.jpg" alt="Tech accessories">
-                <h3>Tech Accessories</h3>
-                <p>Chargers, cables, and desk gadgets.</p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="card h-100 category-card">
-                <img class="card-image" src="Resources/Images/category-organization.jpg" alt="Organization supplies">
-                <h3>Organization</h3>
-                <p>Folders, storage bins, and desk organizers.</p>
-              </div>
-            </div>
+      <section class="section container-xl" aria-labelledby="deptHeading">
+        <div class="section-head">
+          <div>
+            <p class="section-num">01 / Departments</p>
+            <h2 id="deptHeading" class="section-title">Pick a drawer, any drawer.</h2>
           </div>
+          <a href="#/shop" class="link-arrow">Browse everything <svg class="icon"><use href="#i-arrow"></use></svg></a>
+        </div>
+        <div class="dept-grid" id="homeDepartments"></div>
+      </section>
+
+      <section class="section container-xl" aria-labelledby="lovedHeading">
+        <div class="section-head">
+          <div>
+            <p class="section-num">02 / Most loved</p>
+            <h2 id="lovedHeading" class="section-title">What everyone's <em>actually</em> buying.</h2>
+          </div>
+          <a href="#/shop?sort=popular" class="link-arrow">See all best sellers <svg class="icon"><use href="#i-arrow"></use></svg></a>
+        </div>
+        <div class="product-grid" id="homeBestSellers"></div>
+      </section>
+
+      <section class="kits-band" aria-labelledby="kitsHeading">
+        <div class="container-xl">
+          <div class="section-head on-dark">
+            <div>
+              <p class="section-num">03 / Kits</p>
+              <h2 id="kitsHeading" class="section-title">Skip the list. Grab the kit.</h2>
+            </div>
+            <a href="#/kits" class="link-arrow light">See every kit <svg class="icon"><use href="#i-arrow"></use></svg></a>
+          </div>
+          <div class="kit-grid" id="homeKits"></div>
+        </div>
+      </section>
+
+      <section class="section container-xl" aria-labelledby="newHeading">
+        <div class="section-head">
+          <div>
+            <p class="section-num">04 / Just landed</p>
+            <h2 id="newHeading" class="section-title">Fresh off the truck.</h2>
+          </div>
+          <a href="#/shop?sort=newest" class="link-arrow">All new arrivals <svg class="icon"><use href="#i-arrow"></use></svg></a>
+        </div>
+        <div class="rail" id="homeNewArrivals"></div>
+      </section>
+
+      <section class="promise container-xl" aria-label="Why shop with us">
+        <div class="promise-item"><svg class="icon"><use href="#i-clock"></use></svg><div><h3>Ready in 2 hours</h3><p>Order online, then pick it up at the Crimson Supply counter.</p></div></div>
+        <div class="promise-item"><svg class="icon"><use href="#i-box"></use></svg><div><h3>Live stock counts</h3><p>What you see is what's on the shelf. No surprise backorders.</p></div></div>
+        <div class="promise-item"><svg class="icon"><use href="#i-tag"></use></svg><div><h3>Prices locked at checkout</h3><p>The price in your bag is the price on your receipt.</p></div></div>
+        <div class="promise-item"><svg class="icon"><use href="#i-shield"></use></svg><div><h3>No card online</h3><p>Pay when you pick up. We never ask for card details here.</p></div></div>
+      </section>
+    </section>
+
+    <!-- ================= SHOP / SEARCH ================= -->
+    <section class="view" id="view-shop" hidden>
+      <div class="page-band">
+        <div class="container-xl">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span>/</span><span id="shopCrumb">Shop</span></nav>
+          <h1 class="page-title" id="shopTitle">Everything</h1>
+          <p class="page-lede" id="shopLede">Every pen, pad, cable and kit we stock.</p>
         </div>
       </div>
 
-      <div id="about" class="home-block home-block-alt">
-        <div class="container about-inner">
-          <h2 class="section-title">About Crimson Supply</h2>
-          <p>Crimson Supply is your one-stop shop for school and office essentials. We're committed to fast shipping, reliable stock, and prices that make sense for students, teachers, and offices alike.</p>
+      <div class="container-xl shop-layout">
+        <button class="btn-cs btn-cs-ghost w-100 d-lg-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#filterPanel" aria-expanded="false" aria-controls="filterPanel">
+          <svg class="icon"><use href="#i-list"></use></svg> Filters &amp; departments
+        </button>
+
+        <aside class="filter-panel collapse d-lg-block" id="filterPanel" aria-label="Product filters">
+          <form id="filterForm">
+            <fieldset class="filter-group">
+              <legend>Department</legend>
+              <div id="filterCategories" class="filter-cats"></div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+              <legend>Price</legend>
+              <div class="price-row">
+                <label class="visually-hidden" for="filterMin">Minimum price</label>
+                <span class="price-prefix">$</span><input id="filterMin" type="number" min="0" step="1" placeholder="Min" inputmode="decimal">
+                <span class="price-dash">to</span>
+                <label class="visually-hidden" for="filterMax">Maximum price</label>
+                <span class="price-prefix">$</span><input id="filterMax" type="number" min="0" step="1" placeholder="Max" inputmode="decimal">
+              </div>
+              <div class="price-presets">
+                <button type="button" data-price="0-10">Under $10</button>
+                <button type="button" data-price="10-25">$10–25</button>
+                <button type="button" data-price="25-">$25+</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+              <legend>Availability</legend>
+              <label class="switch"><input type="checkbox" id="filterInStock"><span class="switch-track"></span>In stock only</label>
+            </fieldset>
+
+            <button type="submit" class="btn-cs btn-cs-dark w-100">Apply filters</button>
+            <button type="button" class="btn-cs btn-cs-link w-100 mt-2" id="filterReset">Clear all</button>
+          </form>
+        </aside>
+
+        <div class="shop-results">
+          <div class="results-bar">
+            <p class="results-count" id="resultsCount" aria-live="polite"></p>
+            <div class="results-chips" id="activeChips"></div>
+            <label class="sort-select">
+              <span>Sort</span>
+              <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="popular">Best selling</option>
+                <option value="newest">Newest</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="name">Name: A–Z</option>
+              </select>
+            </label>
+          </div>
+          <div class="product-grid" id="shopGrid"></div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Products ===== -->
-    <section id="products" class="page-section d-none">
-      <div class="container py-5">
-        <h2 class="mb-4">Products</h2>
+    <!-- ================= PRODUCT DETAIL (rendered by index.js) ================= -->
+    <section class="view" id="view-product" hidden>
+      <div class="container-xl" id="productDetail"></div>
+    </section>
 
-        <!-- Search and filter controls (not wired up yet) -->
-        <div class="row g-2 mb-4">
-          <div class="col-md-8">
-            <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
-          </div>
-          <div class="col-md-4">
-            <!-- Category options are loaded from the API by index.js -->
-            <select id="categoryFilter" class="form-select">
-              <option value="">All Categories</option>
-            </select>
-          </div>
+    <!-- ================= KITS ================= -->
+    <section class="view" id="view-kits" hidden>
+      <div class="page-band">
+        <div class="container-xl">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span>/</span><span>Kits</span></nav>
+          <h1 class="page-title">Ready-made kits</h1>
+          <p class="page-lede">We picked the pieces that work well together. Add a whole kit in one tap, then tweak quantities in your bag.</p>
         </div>
+      </div>
+      <div class="container-xl" id="kitsList"></div>
+    </section>
 
-        <!-- Message area for loading text, errors, or "no products found" -->
-        <div id="productMessage" class="alert d-none"></div>
-
-        <!-- Product cards are built by index.js from GET /api/products (MySQL Product table) -->
-        <div id="productList" class="row g-4"></div>
+    <!-- ================= CHECKOUT (cart.js) ================= -->
+    <section class="view" id="view-checkout" hidden>
+      <div class="container-xl checkout-wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span>/</span><span>Checkout</span></nav>
+        <h1 class="page-title">Checkout</h1>
+        <ol class="steps" aria-label="Checkout steps">
+          <li class="done">Bag</li><li class="current" aria-current="step">Review &amp; pickup</li><li>Confirmation</li>
+        </ol>
+        <div id="checkoutBody"></div>
       </div>
     </section>
 
-    <!-- ===== Cart ===== -->
-    <section id="cart" class="page-section d-none">
-      <div class="container py-5">
-        <h2 class="mb-4">Your Cart</h2>
-        <p class="mockup-note">Sample cart shown for the mockup.</p>
-
-        <div class="row g-4">
-          <!-- Cart items -->
-          <div class="col-lg-8">
-            <div class="card">
-              <div class="table-responsive">
-                <table class="table align-middle mb-0">
-                  <thead class="table-light">
-                    <tr>
-                      <th>Item</th>
-                      <th>Price</th>
-                      <th style="width: 110px;">Quantity</th>
-                      <th>Subtotal</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Blue Ballpoint Pens (12-pack)</td>
-                      <td>$4.99</td>
-                      <td><input type="number" class="form-control form-control-sm" value="2" min="1"></td>
-                      <td>$9.98</td>
-                      <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
-                    </tr>
-                    <tr>
-                      <td>College-Ruled Spiral Notebook</td>
-                      <td>$3.49</td>
-                      <td><input type="number" class="form-control form-control-sm" value="3" min="1"></td>
-                      <td>$10.47</td>
-                      <td><button class="btn btn-sm btn-outline-danger">Remove</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <a href="#" class="btn btn-crimson-outline mt-3" data-section="products">Continue Shopping</a>
-          </div>
-
-          <!-- Order summary -->
-          <div class="col-lg-4">
-            <div class="card summary-card">
-              <div class="card-body">
-                <h3 class="h5 mb-3">Order Summary</h3>
-                <div class="d-flex justify-content-between"><span>Subtotal</span><span>$20.45</span></div>
-                <div class="d-flex justify-content-between"><span>Tax (8%)</span><span>$1.64</span></div>
-                <div class="d-flex justify-content-between"><span>Shipping</span><span>Free</span></div>
-                <hr>
-                <div class="d-flex justify-content-between fw-bold"><span>Total</span><span>$22.09</span></div>
-                <a href="#" class="btn btn-crimson w-100 mt-3" data-section="checkout">Proceed to Checkout</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- ================= ORDER RECEIPT / CONFIRMATION (cart.js) ================= -->
+    <section class="view" id="view-order" hidden>
+      <div class="container-xl" id="orderBody"></div>
     </section>
 
-    <!-- ===== Checkout ===== -->
-    <section id="checkout" class="page-section d-none">
-      <div class="container py-5">
-        <h2 class="mb-4">Checkout</h2>
+    <!-- ================= SIGN IN / REGISTER (account.js) ================= -->
+    <section class="view" id="view-auth" hidden>
+      <div class="auth-wrap container-xl">
+        <div class="auth-aside" aria-hidden="true">
+          <p class="auth-quote">“The right pen makes the first sentence easier.”</p>
+          <div class="auth-tiles">
+            <img src="Resources/Images/products/fountain-pen.svg" alt="">
+            <img src="Resources/Images/products/dot-notebook.svg" alt="">
+            <img src="Resources/Images/products/sticky-notes.svg" alt="">
+            <img src="Resources/Images/products/highlighters.svg" alt="">
+          </div>
+        </div>
 
-        <div class="row g-4">
-          <div class="col-lg-8">
-            <div class="card">
-              <div class="card-body p-4">
-                <form id="checkoutForm">
-                  <h3 class="h5 mb-3">Shipping Information</h3>
-                  <div class="row g-3 mb-3">
-                    <div class="col-sm-6">
-                      <label for="shipFirstName" class="form-label">First Name</label>
-                      <input type="text" id="shipFirstName" class="form-control" required>
-                    </div>
-                    <div class="col-sm-6">
-                      <label for="shipLastName" class="form-label">Last Name</label>
-                      <input type="text" id="shipLastName" class="form-control" required>
-                    </div>
-                    <div class="col-12">
-                      <label for="shipAddress" class="form-label">Street Address</label>
-                      <input type="text" id="shipAddress" class="form-control" required>
-                    </div>
-                    <div class="col-sm-5">
-                      <label for="shipCity" class="form-label">City</label>
-                      <input type="text" id="shipCity" class="form-control" required>
-                    </div>
-                    <div class="col-sm-3">
-                      <label for="shipState" class="form-label">State</label>
-                      <input type="text" id="shipState" class="form-control" maxlength="2" required>
-                    </div>
-                    <div class="col-sm-4">
-                      <label for="shipZip" class="form-label">ZIP Code</label>
-                      <input type="text" id="shipZip" class="form-control" pattern="[0-9]{5}" title="5-digit ZIP code" required>
-                    </div>
-                  </div>
+        <div class="auth-card">
+          <div class="auth-tabs" role="tablist">
+            <a href="#/signin" id="tabSignIn" role="tab">Sign in</a>
+            <a href="#/register" id="tabRegister" role="tab">Create account</a>
+          </div>
+          <p class="auth-note" id="authNote" hidden></p>
 
-                  <h3 class="h5 mb-3">Payment</h3>
-                  <div class="alert alert-info">
-                    Checkout is simulated for this project. No real payment information is collected.
-                  </div>
+          <form id="signInForm" novalidate>
+            <h1 class="auth-title">Welcome back.</h1>
+            <p class="auth-sub">Sign in to check out, see your orders and update your details.</p>
+            <div class="field">
+              <label for="signInEmail">Email</label>
+              <input id="signInEmail" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="signInPassword">Password</label>
+              <input id="signInPassword" type="password" autocomplete="current-password" required>
+            </div>
+            <div class="form-error" id="signInError" role="alert" hidden></div>
+            <button type="submit" class="btn-cs btn-cs-primary btn-cs-lg w-100">Sign in</button>
+            <p class="auth-switch">New here? <a href="#/register">Create an account</a></p>
+          </form>
 
-                  <button type="submit" class="btn btn-crimson btn-lg w-100">Place Order</button>
-                </form>
+          <form id="registerForm" novalidate hidden>
+            <h1 class="auth-title">Join Crimson Supply.</h1>
+            <p class="auth-sub">An account lets you check out, track pickups and reorder favorites.</p>
+            <div class="field-row">
+              <div class="field">
+                <label for="regFirst">First name</label>
+                <input id="regFirst" autocomplete="given-name" maxlength="50" required>
+              </div>
+              <div class="field">
+                <label for="regLast">Last name</label>
+                <input id="regLast" autocomplete="family-name" maxlength="50" required>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card summary-card">
-              <div class="card-body">
-                <h3 class="h5 mb-3">Your Order</h3>
-                <div class="d-flex justify-content-between small"><span>Ballpoint Pens × 2</span><span>$9.98</span></div>
-                <div class="d-flex justify-content-between small"><span>Spiral Notebook × 3</span><span>$10.47</span></div>
-                <hr>
-                <div class="d-flex justify-content-between"><span>Tax</span><span>$1.64</span></div>
-                <div class="d-flex justify-content-between fw-bold"><span>Total</span><span>$22.09</span></div>
-                <a href="#" class="btn btn-link px-0 mt-2" data-section="cart">&larr; Back to Cart</a>
-              </div>
+            <div class="field">
+              <label for="regEmail">Email</label>
+              <input id="regEmail" type="email" autocomplete="email" maxlength="100" required>
             </div>
-          </div>
+            <div class="field">
+              <label for="regPassword">Password</label>
+              <input id="regPassword" type="password" autocomplete="new-password" minlength="8" maxlength="100" required aria-describedby="regPasswordHelp">
+              <p class="field-help" id="regPasswordHelp">At least 8 characters, with a letter and a number.</p>
+              <div class="pw-meter" aria-hidden="true"><span id="pwMeter"></span></div>
+            </div>
+            <div class="form-error" id="registerError" role="alert" hidden></div>
+            <button type="submit" class="btn-cs btn-cs-primary btn-cs-lg w-100">Create account</button>
+            <p class="auth-switch">Already have an account? <a href="#/signin">Sign in</a></p>
+          </form>
         </div>
       </div>
     </section>
 
-    <!-- ===== Order Confirmation ===== -->
-    <section id="confirmation" class="page-section d-none">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6">
-            <div class="card text-center confirmation-card">
-              <div class="card-body p-5">
-                <div class="confirmation-check">&#10003;</div>
-                <h2 class="mb-2">Thank You for Your Order!</h2>
-                <p class="text-muted">Your order has been placed successfully.</p>
-                <p class="fs-5 mb-1">Order Number: <strong>#1001</strong></p>
-                <p class="mb-4">Order Total: <strong>$22.09</strong></p>
-                <a href="#" class="btn btn-crimson" data-section="products">Continue Shopping</a>
-              </div>
-            </div>
+    <!-- ================= ACCOUNT (account.js) ================= -->
+    <section class="view" id="view-account" hidden>
+      <div class="page-band">
+        <div class="container-xl account-head" id="accountHead"></div>
+      </div>
+      <div class="container-xl account-layout">
+        <nav class="side-tabs" aria-label="Account sections">
+          <a href="#/account/orders" data-account-tab="orders"><svg class="icon"><use href="#i-bag"></use></svg>Orders</a>
+          <a href="#/account/profile" data-account-tab="profile"><svg class="icon"><use href="#i-user"></use></svg>Profile</a>
+          <a href="#/account/security" data-account-tab="security"><svg class="icon"><use href="#i-shield"></use></svg>Password</a>
+        </nav>
+
+        <div class="account-panel">
+          <div data-account-panel="orders">
+            <h2 class="panel-title">Order history</h2>
+            <div id="accountOrders"></div>
           </div>
+
+          <form data-account-panel="profile" id="profileForm" novalidate hidden>
+            <h2 class="panel-title">Profile</h2>
+            <div class="field-row">
+              <div class="field"><label for="profFirst">First name</label><input id="profFirst" maxlength="50" required autocomplete="given-name"></div>
+              <div class="field"><label for="profLast">Last name</label><input id="profLast" maxlength="50" required autocomplete="family-name"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="profEmail">Email</label><input id="profEmail" type="email" maxlength="100" required autocomplete="email"></div>
+              <div class="field"><label for="profPhone">Phone <span class="optional">optional</span></label><input id="profPhone" type="tel" maxlength="20" autocomplete="tel"></div>
+            </div>
+            <div class="form-error" id="profileError" role="alert" hidden></div>
+            <button class="btn-cs btn-cs-dark" type="submit">Save changes</button>
+          </form>
+
+          <form data-account-panel="security" id="passwordForm" novalidate hidden>
+            <h2 class="panel-title">Change password</h2>
+            <div class="field"><label for="pwCurrent">Current password</label><input id="pwCurrent" type="password" autocomplete="current-password" required></div>
+            <div class="field-row">
+              <div class="field"><label for="pwNew">New password</label><input id="pwNew" type="password" autocomplete="new-password" minlength="8" required></div>
+              <div class="field"><label for="pwConfirm">Confirm new password</label><input id="pwConfirm" type="password" autocomplete="new-password" required></div>
+            </div>
+            <p class="field-help">At least 8 characters, with a letter and a number.</p>
+            <div class="form-error" id="passwordError" role="alert" hidden></div>
+            <button class="btn-cs btn-cs-dark" type="submit">Update password</button>
+          </form>
         </div>
       </div>
     </section>
 
-    <!-- ===== Admin Dashboard ===== -->
-    <section id="admin" class="page-section d-none">
-      <div class="container py-5">
-        <h2 class="mb-1">Admin Dashboard</h2>
-        <p class="mockup-note">Sample data shown for the mockup. Admin access will require an Admin login later.</p>
-
-        <!-- Quick stats -->
-        <div class="row g-3 mb-4">
-          <div class="col-sm-4">
-            <div class="card stat-card"><div class="card-body">
-              <div class="stat-label">Total Products</div>
-              <div class="stat-value">4</div>
-            </div></div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card stat-card"><div class="card-body">
-              <div class="stat-label">Low / Out of Stock</div>
-              <div class="stat-value">2</div>
-            </div></div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card stat-card"><div class="card-body">
-              <div class="stat-label">Orders Placed</div>
-              <div class="stat-value">1</div>
-            </div></div>
-          </div>
-        </div>
-
-        <div class="row g-4">
-          <!-- Product and inventory table -->
-          <div class="col-lg-8">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="h5 mb-3">Products &amp; Inventory</h3>
-                <div class="table-responsive">
-                  <table class="table align-middle mb-0">
-                    <thead class="table-light">
-                      <tr>
-                        <th>Product</th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Stock</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Blue Ballpoint Pens (12-pack)</td>
-                        <td>Writing Supplies</td>
-                        <td>$4.99</td>
-                        <td><span class="badge bg-success">48</span></td>
-                        <td class="text-nowrap">
-                          <button class="btn btn-sm btn-crimson-outline">Edit</button>
-                          <button class="btn btn-sm btn-outline-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>College-Ruled Spiral Notebook</td>
-                        <td>Paper &amp; Notebooks</td>
-                        <td>$3.49</td>
-                        <td><span class="badge bg-success">120</span></td>
-                        <td class="text-nowrap">
-                          <button class="btn btn-sm btn-crimson-outline">Edit</button>
-                          <button class="btn btn-sm btn-outline-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>USB-C Charging Cable (6 ft)</td>
-                        <td>Tech Accessories</td>
-                        <td>$9.99</td>
-                        <td><span class="badge bg-warning text-dark">3 (Low)</span></td>
-                        <td class="text-nowrap">
-                          <button class="btn btn-sm btn-crimson-outline">Edit</button>
-                          <button class="btn btn-sm btn-outline-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Desk Pen Holder</td>
-                        <td>Organization</td>
-                        <td>$14.99</td>
-                        <td><span class="badge bg-danger">0 (Out)</span></td>
-                        <td class="text-nowrap">
-                          <button class="btn btn-sm btn-crimson-outline">Edit</button>
-                          <button class="btn btn-sm btn-outline-danger">Delete</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Add product form -->
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="h5 mb-3">Add Product</h3>
-                <form id="addProductForm">
-                  <div class="mb-3">
-                    <label for="newProductName" class="form-label">Product Name</label>
-                    <input type="text" id="newProductName" class="form-control" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="newProductCategory" class="form-label">Category</label>
-                    <select id="newProductCategory" class="form-select" required>
-                      <option value="">Choose...</option>
-                    </select>
-                  </div>
-                  <div class="row g-2 mb-3">
-                    <div class="col-6">
-                      <label for="newProductPrice" class="form-label">Price ($)</label>
-                      <input type="number" id="newProductPrice" class="form-control" min="0" step="0.01" required>
-                    </div>
-                    <div class="col-6">
-                      <label for="newProductStock" class="form-label">Stock</label>
-                      <input type="number" id="newProductStock" class="form-control" min="0" step="1" required>
-                    </div>
-                  </div>
-                  <div id="addProductMessage" class="alert d-none"></div>
-                  <button type="submit" class="btn btn-crimson w-100">Add Product</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- ================= ADMIN WORKSPACE (admin.js) ================= -->
+    <section class="view" id="view-admin" hidden>
+      <div class="admin-shell">
+        <aside class="admin-side" aria-label="Admin sections">
+          <p class="admin-side-label">Workspace</p>
+          <a href="#/admin" data-admin-tab="dashboard"><svg class="icon"><use href="#i-grid"></use></svg>Dashboard</a>
+          <a href="#/admin/products" data-admin-tab="products"><svg class="icon"><use href="#i-box"></use></svg>Products</a>
+          <a href="#/admin/categories" data-admin-tab="categories"><svg class="icon"><use href="#i-layers"></use></svg>Categories</a>
+          <a href="#/admin/orders" data-admin-tab="orders"><svg class="icon"><use href="#i-list"></use></svg>Orders</a>
+          <a href="#/admin/reports" data-admin-tab="reports"><svg class="icon"><use href="#i-chart"></use></svg>Reports</a>
+          <a href="#/" class="admin-back"><svg class="icon"><use href="#i-store"></use></svg>Back to store</a>
+        </aside>
+        <div class="admin-main" id="adminMain"></div>
       </div>
     </section>
 
-    <!-- ===== Login ===== -->
-    <section id="login" class="page-section d-none">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-              <div class="card-body p-4">
-                <h2 class="h4 mb-4 text-center">Log In</h2>
-                <form id="loginForm">
-                  <div class="mb-3">
-                    <label for="loginEmail" class="form-label">Email</label>
-                    <input type="email" id="loginEmail" class="form-control" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="loginPassword" class="form-label">Password</label>
-                    <input type="password" id="loginPassword" class="form-control" required>
-                  </div>
-                  <div id="loginMessage" class="alert d-none"></div>
-                  <button type="submit" class="btn btn-crimson w-100">Log In</button>
-                </form>
-                <p class="text-center small mt-3 mb-0">
-                  Don't have an account? <a href="#" data-section="register">Sign up</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- ================= NOT FOUND ================= -->
+    <section class="view" id="view-notfound" hidden>
+      <div class="container-xl empty-state big">
+        <p class="empty-code">404</p>
+        <h1 class="page-title">This page wandered off the shelf.</h1>
+        <p class="page-lede">The link may be old, or the page may have moved.</p>
+        <a href="#/" class="btn-cs btn-cs-primary">Back to the store</a>
       </div>
     </section>
-
-    <!-- ===== Register ===== -->
-    <section id="register" class="page-section d-none">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-5">
-            <div class="card shadow-sm">
-              <div class="card-body p-4">
-                <h2 class="h4 mb-4 text-center">Create an Account</h2>
-                <form id="registerForm">
-                  <div class="row g-3 mb-3">
-                    <div class="col-sm-6">
-                      <label for="registerFirstName" class="form-label">First Name</label>
-                      <input type="text" id="registerFirstName" class="form-control" required>
-                    </div>
-                    <div class="col-sm-6">
-                      <label for="registerLastName" class="form-label">Last Name</label>
-                      <input type="text" id="registerLastName" class="form-control" required>
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="registerEmail" class="form-label">Email</label>
-                    <input type="email" id="registerEmail" class="form-control" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="registerPassword" class="form-label">Password</label>
-                    <input type="password" id="registerPassword" class="form-control" required>
-                  </div>
-                  <div id="registerMessage" class="alert d-none"></div>
-                  <button type="submit" class="btn btn-crimson w-100">Sign Up</button>
-                </form>
-                <p class="text-center small mt-3 mb-0">
-                  Already have an account? <a href="#" data-section="login">Log in</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- ===== Footer ===== -->
-  <footer class="site-footer mt-auto">
-    <div class="container">
-      &copy; 2026 Crimson Supply. All rights reserved.
+  <footer class="site-footer" id="siteFooter">
+    <div class="container-xl">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-word">Crimson<em>Supply</em></p>
+          <p>School, office and studio supplies with honest prices, live stock and free pickup at the counter.</p>
+        </div>
+        <div>
+          <h2>Shop</h2>
+          <ul id="footerDepts"></ul>
+        </div>
+        <div>
+          <h2>Account</h2>
+          <ul>
+            <li><a href="#/account/orders">Order history</a></li>
+            <li><a href="#/account/profile">Profile</a></li>
+            <li><a href="#/kits">Kits</a></li>
+            <li><a href="#/shop?sort=newest">New arrivals</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Pickup counter</h2>
+          <p class="footer-hours">Mon–Fri 8a–8p<br>Sat–Sun 10a–6p</p>
+          <p class="footer-hours">Orders are ready about 2 hours after you place them.</p>
+        </div>
+      </div>
+      <p class="footer-fine">Crimson Supply is a fictional store built for an MIS 330 class project. It is not affiliated with any university. Checkout is simulated and no payments are processed.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS (needed for the mobile navbar toggle) -->
+  <!-- ===== Cart drawer (Bootstrap offcanvas; contents rendered by cart.js) ===== -->
+  <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerTitle">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title" id="cartDrawerTitle">Your bag <span id="cartDrawerCount"></span></h2>
+      <button type="button" class="icon-button" data-bs-dismiss="offcanvas" aria-label="Close bag"><svg class="icon"><use href="#i-x"></use></svg></button>
+    </div>
+    <div class="offcanvas-body" id="cartDrawerBody"></div>
+    <div class="cart-drawer-foot" id="cartDrawerFoot"></div>
+  </div>
+
+  <!-- ===== Shared modal: admin forms, order details and confirmations fill it with openModal() ===== -->
+  <div class="modal fade" id="appModal" tabindex="-1" aria-labelledby="appModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" id="appModalDialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="appModalTitle"></h2>
+          <button type="button" class="icon-button" data-bs-dismiss="modal" aria-label="Close"><svg class="icon"><use href="#i-x"></use></svg></button>
+        </div>
+        <div class="modal-body" id="appModalBody"></div>
+        <div class="modal-footer" id="appModalFooter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Toast messages (showToast in index.js) ===== -->
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="false"></div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="Resources/Scripts/index.js"></script>
+  <script src="Resources/Scripts/cart.js"></script>
+  <script src="Resources/Scripts/account.js"></script>
+  <script src="Resources/Scripts/admin.js"></script>
 </body>
 </html>

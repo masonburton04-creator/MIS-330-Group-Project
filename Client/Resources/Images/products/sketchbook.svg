@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Hardbound sketchbook"><rect width="400" height="400" fill="#E9E2F0"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M60 110 L200 120 L340 110 L340 300 L200 310 L60 300Z" fill="#2A2420"/>
+<path d="M70 100 L196 112 L196 300 L70 290Z" fill="#FFFDF9"/>
+<path d="M204 112 L330 100 L330 290 L204 300Z" fill="#FFFDF9"/>
+<path d="M226 240 C 236 180 270 150 300 170 C 320 190 290 230 260 220 C 240 214 246 190 270 196" fill="none" stroke="#A3132E" stroke-width="4"/>
+<path d="M90 140 L176 148 M90 162 L160 168" stroke="#C9C3BA" stroke-width="3"/>
+<path d="M100 250 q 20 -30 40 0 t 40 0" fill="none" stroke="#2C4A6B" stroke-width="4"/>
+</g></svg>

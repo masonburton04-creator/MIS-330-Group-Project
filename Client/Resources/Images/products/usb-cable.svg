@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Braided USB-C cable"><rect width="400" height="400" fill="#DDEBE7"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<g fill="none" stroke="#2C4A6B" stroke-width="12"><circle cx="200" cy="200" r="90"/><circle cx="200" cy="200" r="66"/><circle cx="200" cy="200" r="42"/><path d="M290 200 C 310 230 300 270 320 290"/><path d="M110 200 C 90 170 100 120 80 100"/></g>
+<g fill="none" stroke="#FFFDF9" stroke-width="3" stroke-dasharray="6 10"><circle cx="200" cy="200" r="90"/><circle cx="200" cy="200" r="66"/><circle cx="200" cy="200" r="42"/></g>
+<rect x="300" y="282" width="40" height="50" rx="10" fill="#B9B4AC" transform="rotate(-30 320 307)"/><rect x="62" y="64" width="40" height="50" rx="10" fill="#B9B4AC" transform="rotate(-30 82 89)"/>
+</g></svg>

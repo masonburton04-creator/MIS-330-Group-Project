@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Dot grid notebook"><rect width="400" height="400" fill="#EFE1D2"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M168 300 v52 l10 -10 l10 10 v-52" fill="#F2B134"/><path d="M200 300 v40 l9 -9 l9 9 v-40" fill="#2C4A6B"/>
+<rect x="110" y="70" width="190" height="250" rx="10" fill="#A3132E"/>
+<rect x="104" y="76" width="16" height="238" rx="4" fill="#6F0B1F"/>
+<rect x="262" y="70" width="14" height="250" fill="#2A2420"/>
+<rect x="150" y="120" width="90" height="46" rx="4" fill="none" stroke="#F7F2EA" stroke-width="3"/>
+<g fill="#F7F2EA" stroke="none" opacity=".55"><circle cx="160" cy="210" r="3"/><circle cx="180" cy="210" r="3"/><circle cx="200" cy="210" r="3"/><circle cx="220" cy="210" r="3"/><circle cx="160" cy="230" r="3"/><circle cx="180" cy="230" r="3"/><circle cx="200" cy="230" r="3"/><circle cx="220" cy="230" r="3"/><circle cx="160" cy="250" r="3"/><circle cx="180" cy="250" r="3"/><circle cx="200" cy="250" r="3"/><circle cx="220" cy="250" r="3"/></g>
+</g></svg>

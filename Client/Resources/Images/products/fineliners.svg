@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Fineliner set"><rect width="400" height="400" fill="#E1E7F0"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<defs><g id="f"><rect x="-11" y="-150" width="22" height="170" rx="6" fill="#FFFDF9"/><rect x="-11" y="-150" width="22" height="58" rx="6" fill="currentColor"/><path d="M-5 -150 L0 -170 L5 -150" fill="#2A2420"/></g></defs>
+<use href="#f" transform="translate(105 250)" color="#A3132E"/><use href="#f" transform="translate(143 240)" color="#F2B134"/><use href="#f" transform="translate(181 254)" color="#7F9C83"/><use href="#f" transform="translate(219 244)" color="#2C4A6B"/><use href="#f" transform="translate(257 250)" color="#D97A5B"/><use href="#f" transform="translate(295 242)" color="#8A6FB0"/>
+<rect x="70" y="250" width="260" height="70" rx="12" fill="#3B5D82"/><path d="M95 285 H305" stroke="#FFFDF9" stroke-width="3" opacity=".6"/>
+</g></svg>

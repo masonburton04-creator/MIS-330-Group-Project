@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Drafting mechanical pencil"><rect width="400" height="400" fill="#E9E4DA"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<g transform="rotate(-40 200 200)">
+<rect x="70" y="182" width="190" height="36" rx="8" fill="#2A2420"/>
+<rect x="150" y="178" width="96" height="44" rx="8" fill="#B9B4AC"/>
+<path d="M162 180v40M174 180v40M186 180v40M198 180v40M210 180v40M222 180v40M234 180v40" stroke-width="3"/>
+<path d="M260 186 L310 196 L310 204 L260 214Z" fill="#B9B4AC"/><path d="M310 200 L332 200" stroke-width="4"/>
+<rect x="44" y="188" width="28" height="24" rx="6" fill="#B9B4AC"/><path d="M84 170 h70 v8" fill="none"/>
+<rect x="96" y="191" width="40" height="18" rx="3" fill="#A3132E" stroke-width="3"/>
+</g>
+</g></svg>

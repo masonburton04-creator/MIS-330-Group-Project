@@ -1,6 +1,7 @@
 namespace API.Models
 {
-    // One row from the Product table, plus the category name from a JOIN.
+    // One row from the Product table, plus the category name from a JOIN
+    // and the number of units sold (from OrderItem).
     // ASP.NET Core turns this into JSON for the browser automatically.
     public class Product
     {
@@ -10,9 +11,11 @@ namespace API.Models
         public string? Description { get; set; }
         public decimal Price { get; set; }
         public int StockQuantity { get; set; }
+        public string? ImageUrl { get; set; }
         public bool IsActive { get; set; }
         public DateTime CreatedAt { get; set; }
         public int CategoryId { get; set; }
         public string CategoryName { get; set; } = "";
+        public int UnitsSold { get; set; }
     }
 }

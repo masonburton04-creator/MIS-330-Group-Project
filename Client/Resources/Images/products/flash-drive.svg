@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="USB flash drive"><rect width="400" height="400" fill="#F1E5D1"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="104" cy="200" r="34" fill="none" stroke="#B9B4AC" stroke-width="10"/>
+<rect x="140" y="160" width="160" height="80" rx="20" fill="#A3132E"/>
+<rect x="140" y="150" width="140" height="100" rx="10" fill="#B9B4AC" opacity=".9"/><circle cx="160" cy="200" r="10" fill="#E9E4DA"/>
+<rect x="298" y="176" width="44" height="48" rx="4" fill="#E9E4DA"/><rect x="314" y="188" width="10" height="10" fill="#2A2420" stroke="none"/><rect x="314" y="204" width="10" height="10" fill="#2A2420" stroke="none"/>
+<path d="M196 200 h60" stroke="#FFFDF9" stroke-width="4"/>
+</g></svg>

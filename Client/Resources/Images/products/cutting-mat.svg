@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Self-healing cutting mat"><rect width="400" height="400" fill="#E1E9DC"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="60" y="90" width="280" height="220" rx="10" fill="#3E7C6B"/>
+<g stroke="#A8D8C8" stroke-width="1.6" opacity=".8"><path d="M60 130 H340 M60 170 H340 M60 210 H340 M60 250 H340 M60 290 H340 M100 90 V310 M140 90 V310 M180 90 V310 M220 90 V310 M260 90 V310 M300 90 V310"/></g>
+<path d="M66 304 L230 92" stroke="#F7D774" stroke-width="3"/>
+<g transform="rotate(-35 250 230)"><rect x="170" y="218" width="120" height="24" rx="10" fill="#F2B134"/><path d="M290 220 L336 230 L290 240Z" fill="#E9E4DA"/><rect x="200" y="224" width="40" height="12" rx="3" fill="#2A2420"/></g>
+</g></svg>

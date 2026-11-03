@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Colored pencils"><rect width="400" height="400" fill="#F4E6DA"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<defs><g id="cp"><rect x="-10" y="-160" width="20" height="150" fill="currentColor"/><path d="M-10 -160 L0 -186 L10 -160Z" fill="#EBC9A0"/><path d="M-4 -176 L0 -186 L4 -176Z" fill="currentColor"/></g></defs>
+<g transform="translate(200 330)"><use href="#cp" transform="rotate(-42)" color="#8A6FB0"/><use href="#cp" transform="rotate(-30)" color="#2C4A6B"/><use href="#cp" transform="rotate(-18)" color="#A8C8E8"/><use href="#cp" transform="rotate(-6)" color="#7F9C83"/><use href="#cp" transform="rotate(6)" color="#F7D774"/><use href="#cp" transform="rotate(18)" color="#F2B134"/><use href="#cp" transform="rotate(30)" color="#D97A5B"/><use href="#cp" transform="rotate(42)" color="#A3132E"/></g>
+<rect x="130" y="290" width="140" height="44" rx="8" fill="#2A2420"/>
+</g></svg>

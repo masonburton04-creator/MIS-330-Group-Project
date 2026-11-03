@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Commuter backpack"><rect width="400" height="400" fill="#E3DACB"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M160 80 q 40 -40 80 0" fill="none" stroke-width="12"/>
+<rect x="96" y="120" width="26" height="170" rx="12" fill="#6F0B1F"/><rect x="278" y="120" width="26" height="170" rx="12" fill="#6F0B1F"/>
+<path d="M112 110 Q 112 76 160 76 H240 Q 288 76 288 110 V310 Q 288 330 268 330 H132 Q 112 330 112 310Z" fill="#A3132E"/>
+<path d="M112 140 Q 200 170 288 140" fill="none" stroke-width="4"/>
+<rect x="142" y="210" width="116" height="96" rx="16" fill="#8C0F27"/>
+<path d="M150 230 H250" stroke-width="4"/><rect x="232" y="224" width="8" height="18" rx="2" fill="#F2B134" stroke-width="3"/>
+<rect x="186" y="170" width="28" height="14" rx="3" fill="#F2B134" stroke-width="3"/>
+</g></svg>

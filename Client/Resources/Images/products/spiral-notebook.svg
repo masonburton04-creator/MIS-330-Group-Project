@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Three-subject spiral notebook"><rect width="400" height="400" fill="#DCE8E4"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="270" y="130" width="34" height="40" rx="5" fill="#F2B134"/><rect x="270" y="180" width="34" height="40" rx="5" fill="#A3132E"/><rect x="270" y="230" width="34" height="40" rx="5" fill="#7F9C83"/>
+<rect x="100" y="90" width="190" height="236" rx="8" fill="#2C4A6B"/>
+<rect x="132" y="150" width="126" height="56" rx="4" fill="#FFFDF9"/><path d="M146 168 H244 M146 188 H220" stroke-width="3"/>
+<g fill="#F7F2EA"><circle cx="120" cy="88" r="9"/><circle cx="148" cy="88" r="9"/><circle cx="176" cy="88" r="9"/><circle cx="204" cy="88" r="9"/><circle cx="232" cy="88" r="9"/><circle cx="260" cy="88" r="9"/></g>
+<path d="M130 290 H262" stroke="#FFFDF9" stroke-width="3" opacity=".5"/>
+</g></svg>

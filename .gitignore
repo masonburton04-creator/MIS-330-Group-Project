@@ -1,0 +1,13 @@
+# .NET build output: rebuilt by `dotnet build` / `dotnet run` on each computer
+bin/
+obj/
+
+# Editor and OS files
+.vs/
+*.user
+*.suo
+Thumbs.db
+.DS_Store
+
+# Personal notes that don't belong in the shared repo
+Crimson_Supply_Complete_Rebuild_Prompt.md

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Scientific calculator"><rect width="400" height="400" fill="#DCE3EC"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="120" y="56" width="160" height="276" rx="18" fill="#2F3338"/>
+<rect x="140" y="80" width="120" height="54" rx="6" fill="#C9D8B6"/><path d="M152 100 h60 M196 118 h50" stroke-width="3"/>
+<g fill="#55595F" stroke-width="3"><rect x="140" y="150" width="30" height="20" rx="5"/><rect x="185" y="150" width="30" height="20" rx="5"/><rect x="230" y="150" width="30" height="20" rx="5"/></g>
+<g fill="#FFFDF9" stroke-width="3"><rect x="140" y="184" width="30" height="24" rx="5"/><rect x="185" y="184" width="30" height="24" rx="5"/><rect x="140" y="220" width="30" height="24" rx="5"/><rect x="185" y="220" width="30" height="24" rx="5"/><rect x="230" y="220" width="30" height="24" rx="5"/><rect x="140" y="256" width="30" height="24" rx="5"/><rect x="185" y="256" width="30" height="24" rx="5"/><rect x="230" y="256" width="30" height="24" rx="5"/><rect x="140" y="292" width="75" height="24" rx="5"/></g>
+<rect x="230" y="184" width="30" height="24" rx="5" fill="#A3132E" stroke-width="3"/><rect x="230" y="292" width="30" height="24" rx="5" fill="#F2B134" stroke-width="3"/>
+</g></svg>

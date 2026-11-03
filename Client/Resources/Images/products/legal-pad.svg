@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Canary legal pads"><rect width="400" height="400" fill="#E7EEF0"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="132" y="84" width="170" height="236" rx="4" fill="#F0D774" transform="rotate(6 217 202)"/>
+<rect x="104" y="80" width="170" height="240" rx="4" fill="#F9E596"/>
+<g stroke="#7FA6C9" stroke-width="2.5"><path d="M104 140 H274 M104 164 H274 M104 188 H274 M104 212 H274 M104 236 H274 M104 260 H274 M104 284 H274"/></g>
+<path d="M136 112 V320" stroke="#D9534F" stroke-width="2.5"/>
+<rect x="98" y="72" width="182" height="34" rx="4" fill="#A3132E"/>
+<path d="M150 160 q 20 -16 36 0 t 36 0" fill="none" stroke="#2C4A6B" stroke-width="4"/>
+</g></svg>

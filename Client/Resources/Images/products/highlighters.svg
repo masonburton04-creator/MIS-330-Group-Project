@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Pastel highlighters"><rect width="400" height="400" fill="#FBEFD9"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<g stroke="none" opacity=".75"><rect x="60" y="80" width="220" height="34" rx="6" fill="#F7D774" transform="rotate(-6 170 97)"/><rect x="120" y="128" width="220" height="34" rx="6" fill="#F4B6C2" transform="rotate(4 230 145)"/><rect x="80" y="176" width="200" height="34" rx="6" fill="#A8D8C8" transform="rotate(-3 180 193)"/></g>
+<defs><g id="h"><rect x="-24" y="-80" width="48" height="150" rx="14" fill="currentColor"/><rect x="-24" y="-118" width="48" height="56" rx="14" fill="#FFFDF9"/><path d="M-14 70 L-14 92 L14 84 L14 70Z" fill="#FFFDF9"/></g></defs>
+<use href="#h" transform="translate(140 240) rotate(-14)" color="#F7D774"/><use href="#h" transform="translate(200 236)" color="#F4B6C2"/><use href="#h" transform="translate(262 240) rotate(14)" color="#A8D8C8"/>
+</g></svg>

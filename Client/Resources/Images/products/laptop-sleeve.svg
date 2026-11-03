@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Padded laptop sleeve"><rect width="400" height="400" fill="#ECE4DA"/><ellipse cx="200" cy="338" rx="130" ry="14" fill="#2A2420" opacity=".08"/><g stroke="#2A2420" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="70" y="100" width="260" height="200" rx="18" fill="#8C8F94"/>
+<rect x="82" y="112" width="236" height="176" rx="12" fill="none" stroke-dasharray="2 9" stroke="#E9E4DA" stroke-width="3"/>
+<rect x="100" y="180" width="200" height="100" rx="10" fill="#76797E"/>
+<path d="M100 196 H300" stroke-width="3"/>
+<rect x="180" y="86" width="40" height="56" rx="8" fill="#9C6B43"/><circle cx="200" cy="124" r="6" fill="#D9A93A"/>
+</g></svg>
